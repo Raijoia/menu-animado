@@ -1,0 +1,140 @@
+/* Resetando o CSS */
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+  height: 100vh;
+  background: #7d2ae8;
+
+  /* adicionando display felx */
+  display: flex;
+
+  /* Usando o display flex para deixar no centro */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Barra */
+.navbar {
+  position: relative;
+
+  /* Tamanho, cor e borda da barra */
+  height: 120px;
+  width: 500px;
+  background: white;
+  border-radius: 20px;
+
+  /* Adicionando o display flex */
+  display: flex;
+
+  /* Usando o display flex para deixar no centro */
+  align-items: center;
+  justify-content: center;
+
+  /* Tirar tudo que esta sobrando para fora da barra */
+  overflow: hidden;
+}
+
+/* Lista da barra */
+ul {
+  position: relative;
+
+  /* Adicionando o display flex */
+  display: flex;
+
+  /* Usando o display flex para deixar os itens da lista em linha */
+  flex-direction: row;
+}
+
+/* itens da lista */
+li {
+  position: relative;
+
+  /* Para tirar as bolinhas dos itens da lista */
+  list-style-type: none;
+}
+
+/* Links dos itens da lista */
+a {
+  position: relative;
+  height: 120px;
+  width: 90px;
+
+  /* Adicionando o display flex */
+  display: flex;
+
+  /* Usando o display flex para colocar tudo no centro */
+  align-items: center;
+  justify-content: center;
+
+  /* Tirar a linha de baixo de item */
+  text-decoration: none;
+}
+
+/* Ícones */
+i {
+  color: #7d2ae8;
+  font-size: 38px;
+
+  /* Sobrepor o ícone que vai ser trocado */
+  position: absolute;
+}
+
+/* Colocar todas as listas como desativas, para aparecer o icon sem preencher */
+.activeIcon {
+  opacity: 0;
+
+  /* Colocando animação quando mudar o li clicado */
+  transition: all 0.6s ease;
+  transition-delay: 0.2;
+}
+
+/* Colocar o icon preenchido como padrão */
+li.active-list a i {
+  opacity: 1;
+}
+
+/* Linha de baixo, indicar qual lista clicada */
+.indicator {
+  position: absolute;
+  bottom: -19px;
+  left: 34px;
+  width: 25px;
+  height: 36px;
+  background: #7d2ae8;
+  border-radius: 50%;
+
+  /* Animação ao mudar de li */
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Arrumando o indicator */
+.indicator::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  bottom: 50%;
+  height: 22px;
+  width: 20px;
+  background: white;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 10px 0 #7d2ae8;
+}
+
+/* Arrumando o indicator */
+.indicator::after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  bottom: 50%;
+  height: 22px;
+  width: 20px;
+  background: white;
+  border-bottom-left-radius: 20px;
+  box-shadow: 0 10px 0 #7d2ae8;
+}
