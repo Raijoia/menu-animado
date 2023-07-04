@@ -4,8 +4,6 @@ const navBar = document.querySelector('.navbar');
 // Pegando todas as li
 const allLi = document.querySelectorAll('li');
 
-console.log('está funcionando');
-
 // forEach serve para percorrer cada elemento de uma array, nesse caso, todos os elementos do allLi juntos formam uma array
 // sempre retorna o item contido na array e o index dele (posição)
 allLi.forEach((li, index) => {
